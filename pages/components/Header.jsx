@@ -13,7 +13,6 @@ import { CircleFlag } from "react-circle-flags";
 import { langState } from "@/atom";
 import { useRecoilState } from "recoil";
 import Cookies from "js-cookie";
-import { FormattedMessage } from "react-intl";
 import Menu from "./Menu";
 
 const theme = createTheme({
@@ -75,8 +74,12 @@ const Header = React.memo(() => {
 
   useEffect(() => {
     if (cookieLang !== lang) {
-      setLang(cookieLang);
-      router.push(`/${cookieLang}`, undefined, { shallow: true });
+      setLang(cookieLang === undefined ? "tr" : cookieLang);
+      router.push(
+        `/${cookieLang === undefined ? "tr" : cookieLang}`,
+        undefined,
+        { shallow: true }
+      );
     }
   }, [setLang]);
 
