@@ -3,7 +3,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import dayjs from "dayjs";
 import "dayjs/locale/tr";
-import { dropDateState } from "../../../atom";
+import { dropDateState } from "../../../../atom";
 import { useRecoilState } from "recoil";
 import React, { useCallback } from "react";
 import { FormattedMessage } from "react-intl";
@@ -18,8 +18,6 @@ const CarDropDate = React.memo(() => {
     },
     [setDropDate]
   );
-
-  console.log("CarDropDate rendered");
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale={"tr"}>

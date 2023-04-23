@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import CarAddressGet from "./CarAddressGet";
 import CarAddressDrop from "./CarAddressDrop";
-import { differentDropZoneState } from "../../../atom";
+import { differentDropZoneState } from "../../../../atom";
 import { useRecoilValue } from "recoil";
 import React from "react";
 

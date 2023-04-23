@@ -18,5 +18,9 @@
   "page.home.carselect.pickclock": "Abholzeit",
   "page.home.carselect.dropdate": "Rückgabedatum",
   "page.home.carselect.dropclock": "Rückgabezeit",
-  "page.home.carselect.timezone": "Ich werde an einem anderen Ort abgeben."
+  "page.home.carselect.timezone": "Ich werde an einem anderen Ort abgeben.",
+  "page.home.benefit.1": "Kostenlose Stornierung und Änderung",
+  "page.home.benefit.2": "Bestpreisgarantie",
+  "page.home.benefit.3": "Reservierung ohne Vorauszahlung",
+  "page.home.benefit.4": "24/7 Unterstützung und Pannenhilfe"
 }

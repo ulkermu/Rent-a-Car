@@ -1,7 +1,7 @@
 import { InputLabel, MenuItem, FormControl, Select } from "@mui/material";
-import time from "../../../json/time.json";
+import time from "../../../../json/time.json";
 import { useRecoilState } from "recoil";
-import { dropClockState } from "../../../atom";
+import { dropClockState } from "../../../../atom";
 import React, { useCallback } from "react";
 import { FormattedMessage } from "react-intl";
 
@@ -14,8 +14,6 @@ const CarDropClock = React.memo(() => {
     },
     [setDropClock]
   );
-
-  console.log("CarDropClock rendered");
 
   return (
     <FormControl fullWidth>

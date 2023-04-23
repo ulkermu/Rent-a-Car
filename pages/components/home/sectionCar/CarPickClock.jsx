@@ -1,13 +1,13 @@
 import React from "react";
 import { InputLabel, MenuItem, FormControl, Select } from "@mui/material";
-import time from "../../../json/time.json";
+import time from "../../../../json/time.json";
 import { useRecoilState } from "recoil";
-import { pickClockState } from "../../../atom";
+import { pickClockState } from "../../../../atom";
 import { FormattedMessage } from "react-intl";
 
 const CarPickClock = React.memo(() => {
   const [pickClock, setPickClock] = useRecoilState(pickClockState);
-  console.log("CarPickClock rendered");
+
   return (
     <FormControl fullWidth>
       <InputLabel htmlFor="car-take-select-label">

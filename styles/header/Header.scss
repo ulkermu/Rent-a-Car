@@ -1,50 +1,66 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 
-  .header-links {
+  .header-container {
+    max-width: 1280px;
+    width: 100%;
     display: flex;
-    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
 
-    .header-link {
-      border: 1px solid #41a0c9;
-      border-radius: 8px;
-      padding: 6px 8px;
-      transition: all 150ms linear;
-      color: #41a0c9;
-      font-size: 13px;
+    .header-links {
+      display: flex;
+      gap: 20px;
+      max-width: 340px;
+      width: 100%;
 
-      &:hover {
-        background-color: #41a0c9;
-        color: white;
+      .header-link {
+        border: 1px solid #41a0c9;
+        border-radius: 8px;
+        padding: 6px 8px;
         transition: all 150ms linear;
-      }
+        color: #41a0c9;
+        font-size: 13px;
+        max-width: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-      &.active {
-        background-color: #41a0c9;
-        color: white;
-        transition: all 150ms linear;
+        &:hover {
+          background-color: #41a0c9;
+          color: white;
+          transition: all 150ms linear;
+        }
+
+        &.active {
+          background-color: #41a0c9;
+          color: white;
+          transition: all 150ms linear;
+        }
       }
     }
-  }
 
-  .header-lang {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-
-    .header-currency-unit {
-      border: 1px solid;
-      width: 36px;
-      height: 36px;
+    .header-lang {
       display: flex;
+      gap: 10px;
       align-items: center;
       justify-content: center;
-      border-radius: 8px;
-      border-color: rgba(0, 0, 0, 0.23);
-      cursor: default;
+
+      .header-currency-unit {
+        border: 1px solid;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        border-color: rgba(0, 0, 0, 0.23);
+        cursor: default;
+      }
     }
   }
 }

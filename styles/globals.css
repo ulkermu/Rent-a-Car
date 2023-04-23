@@ -57,13 +57,20 @@
   position: fixed;
   top: 0;
   left: 0;
-  padding: 20px;
 }
 
 .footer {
   height: var(--footerHeight);
   background-color: rgba(0, 0, 0, .1);
   padding: 20px;
+}
+
+.header-link {
+  padding: 20px;
+}
+
+.header-link:hover {
+  background: rgba(25, 118, 210, 0.08);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -104,7 +111,7 @@
 html,
 body {
   overflow-x: hidden;
-  padding-right: 0;
+  padding-right: 0 !important;
 }
 
 body {

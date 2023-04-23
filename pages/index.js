@@ -2,7 +2,9 @@ import Head from "next/head";
 import { useIntl } from "react-intl";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import CarSelect from "./components/home/CarSelect";
+import CarSelect from "./components/home/sectionCar/CarSelect";
+import SectionBlog from "./components/home/sectionBlog/SectionBlog";
+import SectionAbout from "./components/home/sectionAbout/SectionAbout";
 
 export default function Home({ dir }) {
   const intl = useIntl();
@@ -25,8 +27,12 @@ export default function Home({ dir }) {
         <link rel="icon" href="/static/rental-car.svg" hrefLang="de" />
       </Head>
       <Header />
-      <main dir={dir} className="page">
-        <CarSelect />
+      <main dir={dir}>
+        <div className="page">
+          <CarSelect />
+        </div>
+        <SectionAbout />
+        <SectionBlog />
       </main>
       <Footer />
     </>

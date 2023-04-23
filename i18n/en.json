@@ -18,5 +18,9 @@
   "page.home.carselect.pickclock": "Pick-up Time",
   "page.home.carselect.dropdate": "Drop-off Date",
   "page.home.carselect.dropclock": "Drop-off Time",
-  "page.home.carselect.timezone": "I will drop off at a different location."
+  "page.home.carselect.timezone": "I will drop off at a different location.",
+  "page.home.benefit.1": "Free Cancellation and Modification",
+  "page.home.benefit.2": "Best Price Guarantee",
+  "page.home.benefit.3": "Reservation without Prepayment",
+  "page.home.benefit.4": "24/7 Support and Roadside Assistance"
 }

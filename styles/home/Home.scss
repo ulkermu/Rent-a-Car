@@ -8,30 +8,50 @@
   width: 100%;
   margin: auto;
 
-  .car {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: #ffffffcc;
+  .car-wrapper {
     box-shadow: var(--shadow);
-    padding: 20px;
     border-radius: 8px;
 
-    .car-select {
-      width: 100%;
+    .car {
       display: flex;
-      gap: 20px;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #ffffffcc;
+      padding: 20px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
 
-      .car-pick {
+      .car-select {
+        width: 100%;
         display: flex;
         gap: 20px;
-        width: 100%;
 
-        .car-select-label {
+        .car-pick {
           display: flex;
-          align-items: center;
-          gap: 5px;
+          gap: 20px;
+          width: 100%;
+
+          .car-select-label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+          }
         }
+      }
+    }
+
+    .car-benefit {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      background-color: white;
+      padding: 10px 20px;
+
+      .car-benefit-item {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
       }
     }
   }

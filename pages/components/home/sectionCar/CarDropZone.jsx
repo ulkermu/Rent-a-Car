@@ -1,7 +1,7 @@
 import { Checkbox, FormControlLabel } from "@mui/material";
 import React, { useEffect } from "react";
 import { useRecoilState } from "recoil";
-import { differentDropZoneState, dropCarAddressState } from "../../../atom";
+import { differentDropZoneState, dropCarAddressState } from "../../../../atom";
 import { FormattedMessage } from "react-intl";
 
 const CarDropZone = React.memo(() => {
@@ -15,8 +15,6 @@ const CarDropZone = React.memo(() => {
       setDropCarAddress("");
     }
   }, [differentDropZone, setDropCarAddress]);
-
-  console.log("CarDropZone rendered");
 
   return (
     <FormControlLabel

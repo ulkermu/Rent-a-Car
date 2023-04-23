@@ -16,7 +16,13 @@
   margin: auto;
 }
 
-.home .car {
+.home .car-wrapper {
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  border-radius: 8px;
+}
+
+.home .car-wrapper .car {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,13 +32,12 @@
           flex-direction: column;
   gap: 10px;
   background-color: #ffffffcc;
-  -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow);
   padding: 20px;
-  border-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
-.home .car .car-select {
+.home .car-wrapper .car .car-select {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -40,7 +45,7 @@
   gap: 20px;
 }
 
-.home .car .car-select .car-pick {
+.home .car-wrapper .car .car-select .car-pick {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,7 +53,7 @@
   width: 100%;
 }
 
-.home .car .car-select .car-pick .car-select-label {
+.home .car-wrapper .car .car-select .car-pick .car-select-label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,5 +61,30 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 5px;
+}
+
+.home .car-wrapper .car-benefit {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white;
+  padding: 10px 20px;
+}
+
+.home .car-wrapper .car-benefit .car-benefit-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=Home.css.map */

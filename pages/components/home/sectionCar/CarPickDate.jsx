@@ -3,7 +3,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { useRecoilState } from "recoil";
-import { pickDateState } from "../../../atom";
+import { pickDateState } from "../../../../atom";
 import dayjs from "dayjs";
 import "dayjs/locale/tr";
 import { FormattedMessage } from "react-intl";

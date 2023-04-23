@@ -1,10 +1,10 @@
 import React from "react";
-import { Box, ThemeProvider, Typography, createTheme } from "@mui/material";
+import { Box, ThemeProvider, createTheme } from "@mui/material";
 import CarAddress from "./CarAddress";
 import CarPick from "./CarPick";
 import CarDrop from "./CarDrop";
 import CarDropZone from "./CarDropZone";
-import { FormattedMessage } from "react-intl";
+import CarBenefit from "./CarBenefit";
 
 const theme = createTheme({
   components: {
@@ -30,19 +30,16 @@ const CarSelect = () => {
   return (
     <ThemeProvider theme={theme}>
       <Box className="home">
-        <Typography variant="h1" fontSize={40}>
-          <FormattedMessage
-            id="page.home.title"
-            values={{ b: (title) => <b>{title}</b> }}
-          />
-        </Typography>
-        <Box className="car">
-          <Box className="car-select">
-            <CarAddress />
-            <CarPick />
-            <CarDrop />
+        <Box className="car-wrapper">
+          <Box className="car">
+            <Box className="car-select">
+              <CarAddress />
+              <CarPick />
+              <CarDrop />
+            </Box>
+            <CarDropZone />
           </Box>
-          <CarDropZone />
+          <CarBenefit />
         </Box>
       </Box>
     </ThemeProvider>

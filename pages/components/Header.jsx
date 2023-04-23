@@ -14,6 +14,7 @@ import { langState } from "@/atom";
 import { useRecoilState } from "recoil";
 import Cookies from "js-cookie";
 import { FormattedMessage } from "react-intl";
+import Menu from "./Menu";
 
 const theme = createTheme({
   components: {
@@ -76,84 +77,59 @@ const Header = React.memo(() => {
     if (cookieLang !== lang) {
       setLang(cookieLang);
       router.push(`/${cookieLang}`, undefined, { shallow: true });
-      console.log("cookieLang", cookieLang);
     }
   }, [setLang]);
 
   return (
     <ThemeProvider theme={theme}>
       <header className="header">
-        <nav className="header-links">
-          <Link
-            className={pathname === "/" ? "header-link active" : "header-link"}
-            href={"/"}
-          >
-            <FormattedMessage
-              id="page.home.link"
-              values={{ b: (title) => <b>{title}</b> }}
-            />
-          </Link>
-          <Link
-            className={
-              pathname === "/hakkimizda" ||
-              pathname === "/about" ||
-              pathname === "/ueber-uns"
-                ? "header-link active"
-                : "header-link"
-            }
-            href={"/about"}
-          >
-            <FormattedMessage
-              id="page.about.link"
-              values={{ b: (title) => <b>{title}</b> }}
-            />
-          </Link>
-          <Link
-            className={
-              pathname === "/blog" ? "header-link active" : "header-link"
-            }
-            href={"/blog"}
-          >
-            <FormattedMessage
-              id="page.blog.link"
-              values={{ b: (title) => <b>{title}</b> }}
-            />
-          </Link>
-        </nav>
-        <div className="header-lang">
-          <Select size="small" value={lang} onChange={handleLangChange}>
-            {[...locales]
-              .sort((a, b) => a < b)
-              .map((locale) => (
-                <MenuItem value={locale} key={locale}>
-                  <Link
-                    style={{
-                      display: "flex",
-                      gap: "5px",
-                      alignItems: "center",
-                      margin: "8px",
-                    }}
-                    href={pathname}
-                    locale={locale}
-                  >
-                    <CircleFlag
-                      countryCode={locale === "en" ? "gb" : locale}
-                      height="20"
-                    />
-                    <Typography fontSize={13}>
-                      {locale === "en"
-                        ? "English"
-                        : locale === "de"
-                        ? "Deutsch"
-                        : "Türkçe"}
-                    </Typography>
-                  </Link>
-                </MenuItem>
-              ))}
-          </Select>
-          <Typography fontSize={20} className="header-currency-unit">
-            {lang === "tr" ? "₺" : lang === "en" ? "$" : "€"}
-          </Typography>
+        <div className="header-container">
+          <img
+            style={{ height: 50, borderRadius: 8 }}
+            src="/static/favicon.png"
+            alt="Rental Car"
+          />
+          <div className="header-lang">
+            <Select
+              sx={{ width: "150px" }}
+              size="small"
+              value={lang}
+              onChange={handleLangChange}
+            >
+              {[...locales]
+                .sort((a, b) => a < b)
+                .map((locale) => (
+                  <MenuItem value={locale} key={locale}>
+                    <Link
+                      style={{
+                        display: "flex",
+                        gap: "5px",
+                        alignItems: "center",
+                        margin: "8px",
+                      }}
+                      href={pathname}
+                      locale={locale}
+                    >
+                      <CircleFlag
+                        countryCode={locale === "en" ? "gb" : locale}
+                        height="20"
+                      />
+                      <Typography fontSize={13}>
+                        {locale === "en"
+                          ? "English"
+                          : locale === "de"
+                          ? "Deutsch"
+                          : "Türkçe"}
+                      </Typography>
+                    </Link>
+                  </MenuItem>
+                ))}
+            </Select>
+            <Typography fontSize={20} className="header-currency-unit">
+              {lang === "tr" ? "₺" : lang === "en" ? "$" : "€"}
+            </Typography>
+            <Menu />
+          </div>
         </div>
       </header>
     </ThemeProvider>

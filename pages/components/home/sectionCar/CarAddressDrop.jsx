@@ -5,46 +5,37 @@ import {
   FormControl,
   Select,
 } from "@mui/material";
-import { useRecoilState, useRecoilValue } from "recoil";
-import { differentDropZoneState, getCarAddressState } from "../../../atom";
-import places from "../../../json/places.json";
+import { useRecoilState } from "recoil";
+import { dropCarAddressState } from "../../../../atom";
 import React, { useCallback } from "react";
+import places from "../../../../json/places.json";
 import { FormattedMessage } from "react-intl";
 
-const CarAddressGet = React.memo(() => {
-  const differentDropZone = useRecoilValue(differentDropZoneState);
-  const [getCarAddress, setGetCarAddress] = useRecoilState(getCarAddressState);
+const CarAddressDrop = React.memo(() => {
+  const [dropCarAddress, setDropCarAddress] =
+    useRecoilState(dropCarAddressState);
 
-  const handleTakingPlace = useCallback(
+  const handleDropCarAddress = useCallback(
     (e) => {
-      setGetCarAddress(e.target.value);
+      setDropCarAddress(e.target.value);
     },
-    [setGetCarAddress]
+    [setDropCarAddress]
   );
-
-  console.log("CarAddressGet rendered");
 
   return (
     <FormControl fullWidth>
       <InputLabel htmlFor="car-take-select-label">
-        {differentDropZone ? (
-          <FormattedMessage
-            id="page.home.carselect.picklocation"
-            values={{ b: (title) => <b>{title}</b> }}
-          />
-        ) : (
-          <FormattedMessage
-            id="page.home.carselect.location"
-            values={{ b: (title) => <b>{title}</b> }}
-          />
-        )}
+        <FormattedMessage
+          id="page.home.carselect.droplocation"
+          values={{ b: (title) => <b>{title}</b> }}
+        />
       </InputLabel>
       <Select
-        value={getCarAddress}
-        onChange={(e) => handleTakingPlace(e)}
+        value={dropCarAddress}
+        onChange={(e) => handleDropCarAddress(e)}
         labelId="car-take-select-label"
         id="car-take-select"
-        label={differentDropZone ? "Alış Yeri" : "Alış/İade Yeri"}
+        label="İade Yeri"
         inputProps={{ MenuProps: { disableScrollLock: true } }}
       >
         <MenuItem value="">
@@ -75,4 +66,4 @@ const CarAddressGet = React.memo(() => {
   );
 });
 
-export default CarAddressGet;
+export default CarAddressDrop;
