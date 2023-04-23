@@ -84,11 +84,13 @@ const Header = React.memo(() => {
     <ThemeProvider theme={theme}>
       <header className="header">
         <div className="header-container">
-          <img
-            style={{ height: 50, borderRadius: 8 }}
-            src="/static/favicon.png"
-            alt="Rental Car"
-          />
+          <Link style={{ display: "flex", alignItems: "center" }} href={"/"}>
+            <img
+              style={{ height: 50, borderRadius: 8 }}
+              src="/static/favicon.png"
+              alt="Rental Car"
+            />
+          </Link>
           <div className="header-lang">
             <Select
               sx={{ width: "150px" }}

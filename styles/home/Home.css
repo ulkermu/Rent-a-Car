@@ -63,6 +63,31 @@
   gap: 5px;
 }
 
+.home .car-wrapper .car .car-select .car-search {
+  background-color: #74adab;
+  min-width: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 8px;
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear;
+  text-transform: none;
+}
+
+.home .car-wrapper .car .car-select .car-search:hover {
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear;
+  background-color: #5d8988;
+}
+
 .home .car-wrapper .car-benefit {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;

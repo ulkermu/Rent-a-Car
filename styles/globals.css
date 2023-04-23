@@ -67,9 +67,11 @@
 
 .header-link {
   padding: 20px;
+  transition: all 150ms linear;
 }
 
 .header-link:hover {
+  transition: all 150ms linear;
   background: rgba(25, 118, 210, 0.08);
 }
 

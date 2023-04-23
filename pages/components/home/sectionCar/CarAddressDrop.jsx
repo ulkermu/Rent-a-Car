@@ -5,13 +5,14 @@ import {
   FormControl,
   Select,
 } from "@mui/material";
-import { useRecoilState } from "recoil";
-import { dropCarAddressState } from "../../../../atom";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { differentDropZoneState, dropCarAddressState } from "../../../../atom";
 import React, { useCallback } from "react";
 import places from "../../../../json/places.json";
 import { FormattedMessage } from "react-intl";
 
 const CarAddressDrop = React.memo(() => {
+  const differentDropZone = useRecoilValue(differentDropZoneState);
   const [dropCarAddress, setDropCarAddress] =
     useRecoilState(dropCarAddressState);
 
@@ -23,7 +24,7 @@ const CarAddressDrop = React.memo(() => {
   );
 
   return (
-    <FormControl fullWidth>
+    <FormControl required={differentDropZone ? true : false} fullWidth>
       <InputLabel htmlFor="car-take-select-label">
         <FormattedMessage
           id="page.home.carselect.droplocation"
@@ -41,7 +42,7 @@ const CarAddressDrop = React.memo(() => {
         <MenuItem value="">
           <em>Temizle</em>
         </MenuItem>
-        <ListSubheader sx={{ backgroundColor: "Highlight", fontWeight: 700 }}>
+        <ListSubheader sx={{ backgroundColor: "#74adab", fontWeight: 700 }}>
           İzmir
         </ListSubheader>
         {places
@@ -51,7 +52,7 @@ const CarAddressDrop = React.memo(() => {
               {e.place}
             </MenuItem>
           ))}
-        <ListSubheader sx={{ backgroundColor: "Highlight", fontWeight: 700 }}>
+        <ListSubheader sx={{ backgroundColor: "#74adab", fontWeight: 700 }}>
           İstanbul
         </ListSubheader>
         {places

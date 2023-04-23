@@ -23,7 +23,7 @@ const CarAddressGet = React.memo(() => {
   );
 
   return (
-    <FormControl fullWidth>
+    <FormControl required fullWidth>
       <InputLabel htmlFor="car-take-select-label">
         {differentDropZone ? (
           <FormattedMessage
@@ -48,7 +48,7 @@ const CarAddressGet = React.memo(() => {
         <MenuItem value="">
           <em>Temizle</em>
         </MenuItem>
-        <ListSubheader sx={{ backgroundColor: "Highlight", fontWeight: 700 }}>
+        <ListSubheader sx={{ backgroundColor: "#74adab", fontWeight: 700 }}>
           İzmir
         </ListSubheader>
         {places
@@ -58,7 +58,7 @@ const CarAddressGet = React.memo(() => {
               {e.place}
             </MenuItem>
           ))}
-        <ListSubheader sx={{ backgroundColor: "Highlight", fontWeight: 700 }}>
+        <ListSubheader sx={{ backgroundColor: "#74adab", fontWeight: 700 }}>
           İstanbul
         </ListSubheader>
         {places

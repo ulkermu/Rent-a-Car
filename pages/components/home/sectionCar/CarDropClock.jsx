@@ -16,7 +16,7 @@ const CarDropClock = React.memo(() => {
   );
 
   return (
-    <FormControl fullWidth>
+    <FormControl required fullWidth>
       <InputLabel htmlFor="car-take-select-label">
         <FormattedMessage
           id="page.home.carselect.dropclock"

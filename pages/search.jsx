@@ -17,11 +17,11 @@ const Search = ({ dir }) => {
 
   useEffect(() => {
     if (locale === "tr") {
-      router.push("/blog", undefined, { shallow: true });
+      router.push("/search", undefined, { shallow: true });
     } else if (locale === "en") {
-      router.push("/en/blog", undefined, { shallow: true });
+      router.push("/en/search", undefined, { shallow: true });
     } else if (locale === "de") {
-      router.push("/de/blog", undefined, { shallow: true });
+      router.push("/de/search", undefined, { shallow: true });
     }
   }, [locale]);
 

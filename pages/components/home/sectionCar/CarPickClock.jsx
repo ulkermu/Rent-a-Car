@@ -9,7 +9,7 @@ const CarPickClock = React.memo(() => {
   const [pickClock, setPickClock] = useRecoilState(pickClockState);
 
   return (
-    <FormControl fullWidth>
+    <FormControl required fullWidth>
       <InputLabel htmlFor="car-take-select-label">
         {
           <FormattedMessage
