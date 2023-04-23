@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "place": "İzmir Havalimanı",
+    "city": "İzmir"
+  },
+  {
+    "id": 2,
+    "place": "Adnan Menderes Havalimanı",
+    "city": "İzmir"
+  },
+  {
+    "id": 3,
+    "place": "İstanbul Havalimanı",
+    "city": "İstanbul"
+  },
+  {
+    "id": 4,
+    "place": "Sabiha Gökçen Havalimanı",
+    "city": "İstanbul"
+  }
+]
