@@ -74,9 +74,9 @@ const Header = React.memo(() => {
 
   useEffect(() => {
     if (cookieLang !== lang) {
-      setLang(cookieLang === undefined ? "tr" : cookieLang);
+      setLang(cookieLang === undefined ? "" : cookieLang);
       router.push(
-        `/${cookieLang === undefined ? "tr" : cookieLang}`,
+        `/${cookieLang === undefined ? "" : cookieLang}`,
         undefined,
         { shallow: true }
       );
