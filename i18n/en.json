@@ -1,0 +1,22 @@
+{
+  "page.home.link": "Home",
+  "page.about.link": "About Us",
+  "page.blog.link": "Blog",
+  "page.home.head.title": "Rent a Car | Explore and Catch the World",
+  "page.about.head.title": "Rental Car | About Us",
+  "page.blog.head.title": "Rental Car | Blog",
+  "page.home.head.meta.description": "You're in the right place for car rental!",
+  "page.about.head.meta.description": "Take a look if you want to rent a car and get to know us!",
+  "page.blog.head.meta.description": "We even wrote articles about places to visit.",
+  "page.home.title": "Welcome to Rental Car Site",
+  "page.about.title": "Rental Car Site - About Us",
+  "page.blog.title": "Rental Car Site - Blog",
+  "page.home.carselect.location": "Pick-up/Drop-off Location",
+  "page.home.carselect.picklocation": "Pick-up Location",
+  "page.home.carselect.droplocation": "Drop-off Location",
+  "page.home.carselect.pickdate": "Pick-up Date",
+  "page.home.carselect.pickclock": "Pick-up Time",
+  "page.home.carselect.dropdate": "Drop-off Date",
+  "page.home.carselect.dropclock": "Drop-off Time",
+  "page.home.carselect.timezone": "I will drop off at a different location."
+}

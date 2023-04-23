@@ -1,0 +1,22 @@
+{
+  "page.home.link": "Anasayfa",
+  "page.about.link": "Hakkımızda",
+  "page.blog.link": "Blog",
+  "page.home.head.title": "Araç Kirala | Gez Toz Dünyayı Yakala",
+  "page.about.head.title": "Rental Car | Hakkımızda",
+  "page.blog.head.title": "Rental Car | Blog",
+  "page.home.head.meta.description": "Araba kiralamak için doğru yerdesin!",
+  "page.about.head.meta.description": "Araba kiralamak ve bizi tanımak istersen bir bak?!",
+  "page.blog.head.meta.description": "Gezilecek yerlerin yazılarını bile yazdık.",
+  "page.home.title": "Rental Car Sitesine Hoş Geldiniz",
+  "page.about.title": "Rental Car Sitesi - Hakkımızda",
+  "page.blog.title": "Rental Car Sitesi - Blog",
+  "page.home.carselect.location": "Alış/İade Yeri",
+  "page.home.carselect.picklocation": "Alış Yeri",
+  "page.home.carselect.droplocation": "İade Yeri",
+  "page.home.carselect.pickdate": "Alış Tarihi",
+  "page.home.carselect.pickclock": "Alış Saati",
+  "page.home.carselect.dropdate": "İade Tarihi",
+  "page.home.carselect.dropclock": "İade Saati",
+  "page.home.carselect.timezone": "Farklı yerde bırakacağım."
+}

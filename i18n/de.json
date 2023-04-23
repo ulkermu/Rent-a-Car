@@ -1,0 +1,22 @@
+{
+  "page.home.link": "Startseite",
+  "page.about.link": "Über uns",
+  "page.blog.link": "Blog",
+  "page.home.head.title": "Auto Mieten | Erkunde und Fang die Welt",
+  "page.about.head.title": "Rental Car | Über uns",
+  "page.blog.head.title": "Rental Car | Blog",
+  "page.home.head.meta.description": "Sie sind am richtigen Ort, um ein Auto zu mieten!",
+  "page.about.head.meta.description": "Schauen Sie vorbei, wenn Sie ein Auto mieten und uns kennenlernen möchten!",
+  "page.blog.head.meta.description": "Wir haben sogar Artikel über Orte zum Besuchen geschrieben.",
+  "page.home.title": "Willkommen auf der Rental Car Seite",
+  "page.about.title": "Rental Car Seite - Über uns",
+  "page.blog.title": "Rental Car Seite - Blog",
+  "page.home.carselect.location": "Abhol-/Rückgabeort",
+  "page.home.carselect.picklocation": "Abholort",
+  "page.home.carselect.droplocation": "Rückgabeort",
+  "page.home.carselect.pickdate": "Abholdatum",
+  "page.home.carselect.pickclock": "Abholzeit",
+  "page.home.carselect.dropdate": "Rückgabedatum",
+  "page.home.carselect.dropclock": "Rückgabezeit",
+  "page.home.carselect.timezone": "Ich werde an einem anderen Ort abgeben."
+}
