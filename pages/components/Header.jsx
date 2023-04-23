@@ -87,8 +87,9 @@ const Header = React.memo(() => {
           <Link style={{ display: "flex", alignItems: "center" }} href={"/"}>
             <img
               style={{ height: 50, borderRadius: 8 }}
-              src="/static/favicon.png"
+              src="/static/logo.jpg"
               alt="Rental Car"
+              loading="lazy"
             />
           </Link>
           <div className="header-lang">

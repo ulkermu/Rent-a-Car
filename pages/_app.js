@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import "../styles/hamburger.css";
+import "@/styles/hamburger.css";
 import "@/styles/header/Header.css";
 import "@/styles/blog/Blog.css";
 import "@/styles/about/About.css";
