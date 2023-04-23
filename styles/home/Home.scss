@@ -1,0 +1,38 @@
+.home {
+  padding: 20px;
+  height: calc(100vh - (var(--headerHeight) + var(--footerHeight)));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+
+  .car {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #ffffffcc;
+    box-shadow: var(--shadow);
+    padding: 20px;
+    border-radius: 8px;
+
+    .car-select {
+      width: 100%;
+      display: flex;
+      gap: 20px;
+
+      .car-pick {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+
+        .car-select-label {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+      }
+    }
+  }
+}
