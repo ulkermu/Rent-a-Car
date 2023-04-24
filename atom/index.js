@@ -41,3 +41,8 @@ export const langState = atom({
   key: "lang",
   default: "tr",
 });
+
+export const carSelectSearchDisabledState = atom({
+  key: "carSelectSearchDisabled",
+  default: false,
+});

@@ -12,6 +12,8 @@ import CarDrop from "./CarDrop";
 import CarDropZone from "./CarDropZone";
 import CarBenefit from "./CarBenefit";
 import { useRouter } from "next/router";
+import { useRecoilValue } from "recoil";
+import { carSelectSearchDisabledState } from "@/atom";
 
 const theme = createTheme({
   components: {
@@ -35,6 +37,7 @@ const theme = createTheme({
 
 const CarSelect = React.memo(() => {
   const router = useRouter();
+  const carSelectSearchDisabled = useRecoilValue(carSelectSearchDisabledState);
 
   const handleSearch = useCallback((e) => {
     e.preventDefault();
@@ -50,7 +53,11 @@ const CarSelect = React.memo(() => {
               <CarAddress />
               <CarPick />
               <CarDrop />
-              <Button type="submit" className="car-search">
+              <Button
+                disabled={carSelectSearchDisabled}
+                type="submit"
+                className="car-search"
+              >
                 Ara
               </Button>
             </form>

@@ -27,7 +27,7 @@ export default function Home({ dir }) {
         <link rel="icon" href="/static/rental-car.svg" hrefLang="de" />
       </Head>
       <Header />
-      <main dir={dir}>
+      <main dir={dir} className="page">
         <div className="car-section">
           <CarSelect />
         </div>
