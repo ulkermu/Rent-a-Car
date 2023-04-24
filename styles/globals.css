@@ -42,11 +42,19 @@
 .page {
   background: linear-gradient(to bottom, transparent, rgb(0, 0, 0)) rgb(255, 255, 255) rgb(214, 219, 220);
   min-height: calc(100vh - var(--headerHeight));
-  background-image: url(../public/static/roadSea.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   margin-top: var(--headerHeight);
+}
+
+.car-section {
+  background: linear-gradient(to bottom, transparent, rgb(0, 0, 0)) rgb(255, 255, 255) rgb(214, 219, 220);
+  min-height: calc(100vh - var(--headerHeight));
+  background-image: url(../public/static/road.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .header {

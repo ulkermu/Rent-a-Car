@@ -28,7 +28,7 @@ export default function Home({ dir }) {
       </Head>
       <Header />
       <main dir={dir}>
-        <div className="page">
+        <div className="car-section">
           <CarSelect />
         </div>
         <SectionAbout />

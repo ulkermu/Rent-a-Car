@@ -3,7 +3,7 @@ import { InputLabel, MenuItem, FormControl, Select } from "@mui/material";
 import time from "../../../../json/time.json";
 import { useRecoilState } from "recoil";
 import { pickClockState } from "../../../../atom";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 
 const CarPickClock = React.memo(() => {
   const [pickClock, setPickClock] = useRecoilState(pickClockState);

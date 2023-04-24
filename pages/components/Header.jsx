@@ -90,7 +90,7 @@ const Header = React.memo(() => {
           <Link style={{ display: "flex", alignItems: "center" }} href={"/"}>
             <img
               style={{ height: 50, borderRadius: 8 }}
-              src="/static/logo.jpg"
+              src="/static/logo.png"
               alt="Rental Car"
               loading="lazy"
             />
