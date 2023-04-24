@@ -31,7 +31,7 @@ const CarDropDate = React.memo(() => {
   const dateDrop = new Date(dropDate.$d);
 
   useEffect(() => {
-    if (datePick.getTime() > dateDrop.getTime()) {
+    if (datePick.getTime() >= dateDrop.getTime()) {
       setDropDate({});
       setCarSelectSearchDisabled(true);
     } else if (isNaN(dateDrop.getTime())) {
@@ -56,7 +56,7 @@ const CarDropDate = React.memo(() => {
         value={dropDate}
         onChange={(e) => handleDropClock(e)}
         disablePast={true}
-        minDate={pickDate}
+        minDate={pickDate.add(1, "day")}
       />
     </LocalizationProvider>
   );

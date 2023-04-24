@@ -55,7 +55,8 @@ const CarDropClock = React.memo(() => {
           <MenuItem
             key={key}
             disabled={
-              datePick.getTime() === dateDrop.getTime() && e.time < pickClock
+              datePick.getTime() + 24 * 60 * 60 * 1000 === dateDrop.getTime() &&
+              e.time < pickClock
             }
             value={e.time}
           >

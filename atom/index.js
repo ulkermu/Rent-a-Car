@@ -1,6 +1,7 @@
 import { atom } from "recoil";
 import dayjs from "dayjs";
-import GetToday from "../utils/GetToday";
+import GetToday from "@/utils/GetToday";
+import GetTomorrow from "@/utils/GetTomorrow";
 
 export const pickDateState = atom({
   key: "pickDate",
@@ -14,7 +15,7 @@ export const pickClockState = atom({
 
 export const dropDateState = atom({
   key: "dropDate",
-  default: dayjs(GetToday()),
+  default: dayjs(GetTomorrow()),
 });
 
 export const dropClockState = atom({
