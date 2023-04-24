@@ -22,7 +22,6 @@ const CarDropClock = React.memo(() => {
   const handleDropClock = useCallback(
     (e) => {
       setDropClock(e);
-      console.log(e);
     },
     [setDropClock]
   );
