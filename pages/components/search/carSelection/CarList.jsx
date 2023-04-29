@@ -1,10 +1,9 @@
 import Car from "./Car";
 import { differenceInDaysState, dropDateState, pickDateState } from "@/atom";
 import { useRecoilState, useRecoilValue } from "recoil";
-import carList from "@/json/carList.json";
 import { useEffect } from "react";
 
-const CarList = () => {
+const CarList = ({ cars }) => {
   const pickDate = useRecoilValue(pickDateState);
   const dropDate = useRecoilValue(dropDateState);
   const [, setDifferenceInDays] = useRecoilState(differenceInDaysState);
@@ -16,9 +15,8 @@ const CarList = () => {
 
   return (
     <div className="rent-a-car-list">
-      {carList.map((car) => (
-        <Car key={car.id} car={car} />
-      ))}
+      {cars && cars.map((car) => <Car key={car.id} car={car} />)}
+      {!cars && <div>Araç Kalmadı :(</div>}
     </div>
   );
 };

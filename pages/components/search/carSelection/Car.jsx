@@ -1,8 +1,7 @@
-import { differenceInDaysState, totalPriceState } from "@/atom";
+import { differenceInDaysState } from "@/atom";
 import { Button, Divider } from "@mui/material";
-import { useState } from "react";
 import { FormattedMessage } from "react-intl";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useRecoilValue } from "recoil";
 
 const Car = ({ car }) => {
   const differenceInDays = useRecoilValue(differenceInDaysState);

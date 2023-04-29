@@ -1,9 +1,9 @@
 import CarList from "./carSelection/CarList";
 
-const SearchOption = () => {
+const SearchOption = ({ cars }) => {
   return (
     <div className="rent-a-car-option">
-      <CarList />
+      <CarList cars={cars} />
     </div>
   );
 };

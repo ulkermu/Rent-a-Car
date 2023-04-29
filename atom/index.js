@@ -1,7 +1,4 @@
 import { atom } from "recoil";
-import dayjs from "dayjs";
-import GetToday from "@/utils/GetToday";
-import GetTomorrow from "@/utils/GetTomorrow";
 
 export const pickDateState = atom({
   key: "pickDate",
@@ -50,10 +47,5 @@ export const carSelectSearchDisabledState = atom({
 
 export const differenceInDaysState = atom({
   key: "differenceInDays",
-  default: 0,
-});
-
-export const totalPriceState = atom({
-  key: "totalPrice",
   default: 0,
 });

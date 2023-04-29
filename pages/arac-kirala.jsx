@@ -2,7 +2,7 @@ import Footer from "@/pages/components/Footer";
 import Header from "@/pages/components/Header";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import SearchOption from "./components/search/SearchOption";
 import {
@@ -12,15 +12,17 @@ import {
 } from "@/atom";
 import { useRecoilValue } from "recoil";
 
-const Search = ({ dir }) => {
+const Search = ({ dir, cars }) => {
   const intl = useIntl();
   const router = useRouter();
   const { locale } = router;
 
-  const title = intl.formatMessage({ id: "page.blog.head.title" });
-  const description = intl.formatMessage({
-    id: "page.blog.head.meta.description",
-  });
+  const [render, setRender] = useState(false);
+
+  // const title = intl.formatMessage({ id: "page.blog.head.title" });
+  // const description = intl.formatMessage({
+  //   id: "page.blog.head.meta.description",
+  // });
 
   const differentDropZone = useRecoilValue(differentDropZoneState);
   const getCarAddress = useRecoilValue(getCarAddressState);
@@ -29,6 +31,8 @@ const Search = ({ dir }) => {
   useEffect(() => {
     if (!getCarAddress || (differentDropZone && !dropCarAddress)) {
       router.push("/", undefined, { shallow: true });
+    } else {
+      setRender(true);
     }
   }, [router, getCarAddress, differentDropZone, dropCarAddress]);
 
@@ -45,8 +49,11 @@ const Search = ({ dir }) => {
   return (
     <>
       <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
+        <title>Araç Kirala | Araç Kiralama Sayfası</title>
+        <meta
+          name="description"
+          content="Bütün araçlarımız sudan ucuz ve temiz. Daha ne olsun?"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/static/rental-car.svg" />
         <link rel="icon" href="/static/rental-car.svg" hrefLang="x-default" />
@@ -56,17 +63,12 @@ const Search = ({ dir }) => {
       </Head>
       <Header />
       <main dir={dir} className="page">
-        <div className="rent-a-car">
-          <h1>
-            <FormattedMessage
-              id="page.blog.title"
-              values={{ b: (title) => <b>{title}</b> }}
-            />
-          </h1>
-          {!(!getCarAddress || (differentDropZone && !dropCarAddress)) && (
-            <SearchOption />
-          )}
-        </div>
+        {render && (
+          <div className="rent-a-car">
+            <h1>Araç Kiralama Sayfası</h1>
+            <SearchOption cars={cars} />
+          </div>
+        )}
       </main>
       <Footer />
     </>
@@ -74,3 +76,12 @@ const Search = ({ dir }) => {
 };
 
 export default Search;
+
+export async function getServerSideProps(context) {
+  // Fetch data from external API
+  const res = await fetch(`http://localhost:3000/api/cars`);
+  const cars = await res.json();
+
+  // Pass data to the page via props
+  return { props: { cars } };
+}
