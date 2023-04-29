@@ -1,0 +1,46 @@
+.rent-a-car {
+  padding: 20px;
+  .rent-a-car-option {
+    .rent-a-car-list {
+      .rent-a-car-list-item {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.23);
+        padding: 20px;
+        display: flex;
+        gap: 20px;
+
+        .list-item {
+          &.options {
+            display: grid;
+            align-items: center;
+            max-width: 500px;
+            width: 100%;
+
+            .options-model {
+              text-align: center;
+            }
+
+            .list-item-car-option {
+              display: flex;
+              justify-content: space-around;
+
+              .divider {
+                width: 1px;
+                height: 60px;
+                background-color: rgba(0, 0, 0, 0.23);
+              }
+
+              .list-item-car-option-item {
+                display: grid;
+                gap: 5px;
+                justify-content: center;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

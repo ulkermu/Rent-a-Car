@@ -5,22 +5,22 @@ import GetTomorrow from "@/utils/GetTomorrow";
 
 export const pickDateState = atom({
   key: "pickDate",
-  default: dayjs(GetToday()),
+  default: new Date(),
 });
 
 export const pickClockState = atom({
   key: "pickClock",
-  default: "",
+  default: "08.00",
 });
 
 export const dropDateState = atom({
   key: "dropDate",
-  default: dayjs(GetTomorrow()),
+  default: new Date(new Date().getTime() + (24 * 60 * 60 * 1000)),
 });
 
 export const dropClockState = atom({
   key: "dropClock",
-  default: "",
+  default: "08.00",
 });
 
 export const getCarAddressState = atom({
@@ -46,4 +46,14 @@ export const langState = atom({
 export const carSelectSearchDisabledState = atom({
   key: "carSelectSearchDisabled",
   default: false,
+});
+
+export const differenceInDaysState = atom({
+  key: "differenceInDays",
+  default: 0,
+});
+
+export const totalPriceState = atom({
+  key: "totalPrice",
+  default: 0,
 });

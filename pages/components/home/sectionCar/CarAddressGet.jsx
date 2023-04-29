@@ -23,8 +23,8 @@ const CarAddressGet = React.memo(() => {
   );
 
   return (
-    <FormControl required fullWidth>
-      <InputLabel htmlFor="car-take-select-label">
+    <div className="form__group field">
+      <label className="form__label field" htmlFor="car-take-select-label">
         {differentDropZone ? (
           <FormattedMessage
             id="page.home.carselect.picklocation"
@@ -36,40 +36,41 @@ const CarAddressGet = React.memo(() => {
             values={{ b: (title) => <b>{title}</b> }}
           />
         )}
-      </InputLabel>
-      <Select
-        value={getCarAddress}
-        onChange={(e) => handleTakingPlace(e)}
-        labelId="car-take-select-label"
-        id="car-take-select"
-        label={differentDropZone ? "Alış Yeri" : "Alış/İade Yeri"}
-        inputProps={{ MenuProps: { disableScrollLock: true } }}
-      >
-        <MenuItem value="">
-          <em>Temizle</em>
-        </MenuItem>
-        <ListSubheader sx={{ backgroundColor: "#74adab", fontWeight: 700 }}>
-          İzmir
-        </ListSubheader>
-        {places
-          .filter((e) => e.city === "İzmir")
-          .map((e, i) => (
-            <MenuItem key={i} value={e.place}>
-              {e.place}
-            </MenuItem>
-          ))}
-        <ListSubheader sx={{ backgroundColor: "#74adab", fontWeight: 700 }}>
-          İstanbul
-        </ListSubheader>
-        {places
-          .filter((e) => e.city === "İstanbul")
-          .map((e, i) => (
-            <MenuItem key={i} value={e.place}>
-              {e.place}
-            </MenuItem>
-          ))}
-      </Select>
-    </FormControl>
+      </label>
+      <FormControl variant="standard" required fullWidth>
+        <Select
+          value={getCarAddress}
+          onChange={(e) => handleTakingPlace(e)}
+          labelId="car-take-select-label"
+          id="car-take-select"
+          inputProps={{ MenuProps: { disableScrollLock: true } }}
+        >
+          <MenuItem value="">
+            <em>Temizle</em>
+          </MenuItem>
+          <ListSubheader sx={{ backgroundColor: "#74adab", fontWeight: 700 }}>
+            İzmir
+          </ListSubheader>
+          {places
+            .filter((e) => e.city === "İzmir")
+            .map((e, i) => (
+              <MenuItem key={i} value={e.place}>
+                {e.place}
+              </MenuItem>
+            ))}
+          <ListSubheader sx={{ backgroundColor: "#74adab", fontWeight: 700 }}>
+            İstanbul
+          </ListSubheader>
+          {places
+            .filter((e) => e.city === "İstanbul")
+            .map((e, i) => (
+              <MenuItem key={i} value={e.place}>
+                {e.place}
+              </MenuItem>
+            ))}
+        </Select>
+      </FormControl>
+    </div>
   );
 });
 

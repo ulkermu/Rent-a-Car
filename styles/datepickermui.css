@@ -1,0 +1,18 @@
+.react-datepicker {
+  display: flex !important;
+}
+
+.react-datepicker-pooper {
+  position: absolute;
+}
+
+.react-datepicker__tab-loop {
+  position: absolute;
+}
+
+@media (max-width: 740px) {
+  .react-datepicker {
+    display: inline-block !important;
+  }
+
+}

@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  pageExtensions: ["mdx", "md", "jsx", "js", "tsx", "ts"],
   reactStrictMode: false,
   i18n: {
     locales: ["tr", "en", "de"],
@@ -19,6 +20,22 @@ const nextConfig = {
       {
         source: "/ueber-uns",
         destination: "/about",
+      },
+      {
+        source: "/arac-kirala",
+        destination: "/arac-kirala",
+      },
+      {
+        source: "/rent-a-car",
+        destination: "/arac-kirala",
+      },
+      {
+        source: "/rent-a-car",
+        destination: "/arac-kirala",
+      },
+      {
+        source: "/ein-auto-mieten",
+        destination: "/arac-kirala",
       },
     ];
   },

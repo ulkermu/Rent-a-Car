@@ -19,7 +19,7 @@ const CarDropZone = React.memo(() => {
   return (
     <FormControlLabel
       sx={{
-        background: "#74adab",
+        background: "var(--brand)",
         borderRadius: "8px",
         paddingRight: "10px",
         margin: 0,

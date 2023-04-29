@@ -9,33 +9,32 @@ const CarPickClock = React.memo(() => {
   const [pickClock, setPickClock] = useRecoilState(pickClockState);
 
   return (
-    <FormControl required fullWidth>
-      <InputLabel htmlFor="car-take-select-label">
-        {
-          <FormattedMessage
-            id="page.home.carselect.pickclock"
-            values={{ b: (title) => <b>{title}</b> }}
-          />
-        }
-      </InputLabel>
-      <Select
-        value={pickClock}
-        onChange={(e) => setPickClock(e.target.value)}
-        labelId="car-take-select-label"
-        id="car-take-select"
-        label="Alış Saati"
-        inputProps={{ MenuProps: { disableScrollLock: true } }}
-      >
-        <MenuItem value="">
-          <em>Temizle</em>
-        </MenuItem>
-        {time.map((e, key) => (
-          <MenuItem key={key} value={e.time}>
-            {e.time}
+    <div className="form__group field">
+      <label className="form__label field" htmlFor="car-take-hour">
+        <FormattedMessage
+          id="page.home.carselect.pickclock"
+          values={{ b: (title) => <b>{title}</b> }}
+        />
+      </label>
+      <FormControl variant="standard" required fullWidth>
+        <Select
+          value={pickClock}
+          onChange={(e) => setPickClock(e.target.value)}
+          labelId="car-take-hour"
+          id="car-take-hour"
+          inputProps={{ MenuProps: { disableScrollLock: true } }}
+        >
+          <MenuItem value="">
+            <em>Temizle</em>
           </MenuItem>
-        ))}
-      </Select>
-    </FormControl>
+          {time.map((e, key) => (
+            <MenuItem key={key} value={e.time}>
+              {e.time.replace(".", ":")}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
+    </div>
   );
 });
 

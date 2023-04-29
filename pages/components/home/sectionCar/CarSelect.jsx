@@ -14,6 +14,7 @@ import CarBenefit from "./CarBenefit";
 import { useRouter } from "next/router";
 import { useRecoilValue } from "recoil";
 import { carSelectSearchDisabledState } from "@/atom";
+import { FormattedMessage } from "react-intl";
 
 const theme = createTheme({
   components: {
@@ -32,6 +33,13 @@ const theme = createTheme({
         },
       },
     },
+    MuiFormLabel: {
+      styleOverrides: {
+        root: {
+          //fontWeight: 700,
+        },
+      },
+    },
   },
 });
 
@@ -41,7 +49,7 @@ const CarSelect = React.memo(() => {
 
   const handleSearch = useCallback((e) => {
     e.preventDefault();
-    router.push("/search", undefined, { shallow: true });
+    router.push("/arac-kirala", undefined, { shallow: true });
   }, []);
 
   return (
@@ -58,7 +66,10 @@ const CarSelect = React.memo(() => {
                 type="submit"
                 className="car-search"
               >
-                Ara
+                <FormattedMessage
+                  id="page.home.rent"
+                  values={{ b: (title) => <b>{title}</b> }}
+                />
               </Button>
             </form>
             <CarDropZone />

@@ -4,6 +4,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
+import SearchOption from "./components/search/SearchOption";
 
 const Search = ({ dir }) => {
   const intl = useIntl();
@@ -17,11 +18,11 @@ const Search = ({ dir }) => {
 
   useEffect(() => {
     if (locale === "tr") {
-      router.push("/search", undefined, { shallow: true });
+      router.push("/arac-kirala", undefined, { shallow: true });
     } else if (locale === "en") {
-      router.push("/en/search", undefined, { shallow: true });
+      router.push("/en/rent-a-car", undefined, { shallow: true });
     } else if (locale === "de") {
-      router.push("/de/search", undefined, { shallow: true });
+      router.push("/de/ein-auto-mieten", undefined, { shallow: true });
     }
   }, [locale]);
 
@@ -39,13 +40,14 @@ const Search = ({ dir }) => {
       </Head>
       <Header />
       <main dir={dir} className="page">
-        <div className="blog">
+        <div className="rent-a-car">
           <h1>
             <FormattedMessage
               id="page.blog.title"
               values={{ b: (title) => <b>{title}</b> }}
             />
           </h1>
+          <SearchOption />
         </div>
       </main>
       <Footer />

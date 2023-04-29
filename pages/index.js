@@ -5,8 +5,10 @@ import Footer from "./components/Footer";
 import CarSelect from "./components/home/sectionCar/CarSelect";
 import SectionBlog from "./components/home/sectionBlog/SectionBlog";
 import SectionAbout from "./components/home/sectionAbout/SectionAbout";
+import SectionLocation from "./components/home/sectionLocation/SectionLocation";
+import { Divider } from "@mui/material";
 
-export default function Home({ dir }) {
+export default function Home({ dir, blog }) {
   const intl = useIntl();
 
   const title = intl.formatMessage({ id: "page.home.head.title" });
@@ -32,9 +34,21 @@ export default function Home({ dir }) {
           <CarSelect />
         </div>
         <SectionAbout />
-        <SectionBlog />
+        <Divider />
+        <SectionLocation />
+        <Divider />
+        <SectionBlog blog={blog} />
       </main>
       <Footer />
     </>
   );
+}
+
+export async function getServerSideProps(context) {
+  // Fetch data from external API
+  const res = await fetch(`http://localhost:3000/api/blog`);
+  const blog = await res.json();
+
+  // Pass data to the page via props
+  return { props: { blog } };
 }

@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "model": "Citroen Elysee Benzinli Manuel",
+    "class": "eko",
+    "fuel": "gasoline",
+    "gear": "manuel",
+    "price": 675
+  }
+]

@@ -1,9 +1,12 @@
 import "@/styles/globals.css";
-import "@/styles/hamburger.css";
+import "@/styles/menu.css";
+import "@/styles/input.css";
+import "@/styles/datepickermui.css";
 import "@/styles/header/Header.css";
+import "@/styles/home/Home.css";
+import "@/styles/rent/Rent.css"
 import "@/styles/blog/Blog.css";
 import "@/styles/about/About.css";
-import "@/styles/home/Home.css";
 import { useRouter } from "next/router";
 import { IntlProvider } from "react-intl";
 import tr from "../i18n/tr.json";

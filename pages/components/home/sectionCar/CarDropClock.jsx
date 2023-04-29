@@ -16,8 +16,8 @@ const CarDropClock = React.memo(() => {
   const dropDate = useRecoilValue(dropDateState);
   const pickClock = useRecoilValue(pickClockState);
 
-  const datePick = new Date(pickDate.$d);
-  const dateDrop = new Date(dropDate.$d);
+  //const datePick = new Date(pickDate.$d);
+  //const dateDrop = new Date(dropDate.$d);
 
   const handleDropClock = useCallback(
     (e) => {
@@ -33,38 +33,45 @@ const CarDropClock = React.memo(() => {
   }, [pickClock.length, setDropClock]);
 
   return (
-    <FormControl required disabled={pickClock.length === 0} fullWidth>
-      <InputLabel htmlFor="car-take-select-label">
+    <div className="form__group field">
+      <label className="form__label field" htmlFor="car-drop-hour">
         <FormattedMessage
           id="page.home.carselect.dropclock"
           values={{ b: (title) => <b>{title}</b> }}
         />
-      </InputLabel>
-      <Select
-        value={dropClock}
-        onChange={(e) => handleDropClock(e.target.value)}
-        labelId="car-take-select-label"
-        id="car-take-select"
-        label="İade Saati"
-        inputProps={{ MenuProps: { disableScrollLock: true } }}
+      </label>
+      <FormControl
+        required
+        disabled={pickClock.length === 0}
+        fullWidth
+        variant="standard"
       >
-        <MenuItem value="">
-          <em>Temizle</em>
-        </MenuItem>
-        {time.map((e, key) => (
-          <MenuItem
-            key={key}
-            disabled={
-              datePick.getTime() + 24 * 60 * 60 * 1000 === dateDrop.getTime() &&
-              e.time < pickClock
-            }
-            value={e.time}
-          >
-            {e.time.replace(".", ":")}
+        <Select
+          value={dropClock}
+          onChange={(e) => handleDropClock(e.target.value)}
+          labelId="car-drop-hour"
+          id="car-drop-hour"
+          label="İade Saati"
+          inputProps={{ MenuProps: { disableScrollLock: true } }}
+        >
+          <MenuItem value="">
+            <em>Temizle</em>
           </MenuItem>
-        ))}
-      </Select>
-    </FormControl>
+          {time.map((e, key) => (
+            <MenuItem
+              key={key}
+              disabled={
+                pickDate?.getTime() + 24 * 60 * 60 * 1000 ===
+                  dropDate?.getTime() && e.time < pickClock
+              }
+              value={e.time}
+            >
+              {e.time.replace(".", ":")}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
+    </div>
   );
 });
 

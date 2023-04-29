@@ -1,3 +1,33 @@
 .blog {
   padding: 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  .blog-wrapper {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.23);
+
+    h1 {
+      margin: 20px 0;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--brand);
+      width: fit-content;
+    }
+
+    .image-wrapper {
+      display: flex;
+      justify-content: center;
+      height: 500px;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
 }

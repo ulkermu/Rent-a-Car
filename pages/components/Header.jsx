@@ -13,7 +13,7 @@ import { CircleFlag } from "react-circle-flags";
 import { langState } from "@/atom";
 import { useRecoilState } from "recoil";
 import Cookies from "js-cookie";
-import Menu from "./Menu";
+import NavMenu from "./NavMenu";
 
 const theme = createTheme({
   components: {
@@ -75,11 +75,9 @@ const Header = React.memo(() => {
   useEffect(() => {
     if (cookieLang !== lang) {
       setLang(cookieLang === undefined ? "tr" : cookieLang);
-      router.push(
-        `/${cookieLang === undefined ? "" : cookieLang}`,
-        undefined,
-        { shallow: true }
-      );
+      router.push(`/${cookieLang === undefined ? "" : cookieLang}`, undefined, {
+        shallow: true,
+      });
     }
   }, [setLang]);
 
@@ -134,7 +132,7 @@ const Header = React.memo(() => {
             <Typography fontSize={20} className="header-currency-unit">
               {lang === "tr" ? "₺" : lang === "en" ? "$" : "€"}
             </Typography>
-            <Menu />
+            <NavMenu />
           </div>
         </div>
       </header>
