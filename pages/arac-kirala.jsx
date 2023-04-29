@@ -5,6 +5,12 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import SearchOption from "./components/search/SearchOption";
+import {
+  differentDropZoneState,
+  getCarAddressState,
+  dropCarAddressState,
+} from "@/atom";
+import { useRecoilValue } from "recoil";
 
 const Search = ({ dir }) => {
   const intl = useIntl();
@@ -15,6 +21,16 @@ const Search = ({ dir }) => {
   const description = intl.formatMessage({
     id: "page.blog.head.meta.description",
   });
+
+  const differentDropZone = useRecoilValue(differentDropZoneState);
+  const getCarAddress = useRecoilValue(getCarAddressState);
+  const dropCarAddress = useRecoilValue(dropCarAddressState);
+
+  useEffect(() => {
+    if (!getCarAddress || (differentDropZone && !dropCarAddress)) {
+      router.push("/", undefined, { shallow: true });
+    }
+  }, [router, getCarAddress, differentDropZone, dropCarAddress]);
 
   useEffect(() => {
     if (locale === "tr") {
@@ -47,7 +63,9 @@ const Search = ({ dir }) => {
               values={{ b: (title) => <b>{title}</b> }}
             />
           </h1>
-          <SearchOption />
+          {!(!getCarAddress || (differentDropZone && !dropCarAddress)) && (
+            <SearchOption />
+          )}
         </div>
       </main>
       <Footer />
