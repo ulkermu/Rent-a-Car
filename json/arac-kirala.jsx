@@ -4,7 +4,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-import SearchOption from "./components/search/SearchOption";
+import SearchOption from "../pages/components/search/SearchOption";
 import {
   differentDropZoneState,
   getCarAddressState,
