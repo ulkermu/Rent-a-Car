@@ -3,9 +3,9 @@ import { useIntl } from "react-intl";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import CarSelect from "./components/home/sectionCar/CarSelect";
-import SectionBlog from "./components/home/sectionBlog/SectionBlog";
-import SectionAbout from "./components/home/sectionAbout/SectionAbout";
-import SectionLocation from "./components/home/sectionLocation/SectionLocation";
+import SectionBlog from "./components/home/SectionBlog";
+import SectionAbout from "./components/home/SectionAbout";
+import SectionLocation from "./components/home/SectionLocation";
 import { Divider } from "@mui/material";
 
 export default function Home({ dir, blog }) {

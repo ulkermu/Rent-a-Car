@@ -6,7 +6,7 @@ const BlogTitle = ({ dir, blog }) => {
   return (
     <>
       <Head>
-        <title>Blog Sayfası</title>
+        <title>{blog.title}</title>
         <meta name="description" content="Okuyun, öğrenin." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/static/rental-car.svg" />

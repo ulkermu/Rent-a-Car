@@ -49,3 +49,8 @@ export const differenceInDaysState = atom({
   key: "differenceInDays",
   default: 0,
 });
+
+export const carsState = atom({
+  key: "cars",
+  default: [],
+});

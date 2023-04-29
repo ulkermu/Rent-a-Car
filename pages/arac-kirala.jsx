@@ -4,7 +4,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-import SearchOption from "../pages/components/search/SearchOption";
+import SearchOption from "./components/search/SearchOption";
 import {
   differentDropZoneState,
   getCarAddressState,
@@ -30,7 +30,7 @@ const Search = ({ dir, cars }) => {
 
   useEffect(() => {
     if (!getCarAddress || (differentDropZone && !dropCarAddress)) {
-      router.push("/", undefined, { shallow: true });
+      //router.push("/", undefined, { shallow: true });
     } else {
       setRender(true);
     }
@@ -63,12 +63,10 @@ const Search = ({ dir, cars }) => {
       </Head>
       <Header />
       <main dir={dir} className="page">
-        {render && (
-          <div className="rent-a-car">
-            <h1>Araç Kiralama Sayfası</h1>
-            <SearchOption cars={cars} />
-          </div>
-        )}
+        <div className="rent-a-car">
+          <h1>Araç Kiralama Sayfası</h1>
+          <SearchOption />
+        </div>
       </main>
       <Footer />
     </>
@@ -77,11 +75,11 @@ const Search = ({ dir, cars }) => {
 
 export default Search;
 
-export async function getServerSideProps(context) {
-  // Fetch data from external API
-  const res = await fetch(`http://localhost:3000/api/cars`);
-  const cars = await res.json();
+// export async function getServerSideProps(context) {
+//   // Fetch data from external API
+//   const res = await fetch(`http://localhost:3000/api/cars`);
+//   const cars = await res.json();
 
-  // Pass data to the page via props
-  return { props: { cars } };
-}
+//   // Pass data to the page via props
+//   return { props: { cars } };
+// }
