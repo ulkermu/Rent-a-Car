@@ -19,9 +19,9 @@ const About = ({ dir }) => {
     if (locale === "tr") {
       router.push("/hakkimizda", undefined, { shallow: true });
     } else if (locale === "en") {
-      router.push("/en/about", undefined, { shallow: true });
+      router.push("/about", undefined, { shallow: true });
     } else if (locale === "de") {
-      router.push("/de/ueber-uns", undefined, { shallow: true });
+      router.push("/ueber-uns", undefined, { shallow: true });
     }
   }, [locale]);
 

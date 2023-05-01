@@ -29,9 +29,9 @@ const Search = ({ dir }) => {
     if (locale === "tr") {
       router.push("/arac-kirala", undefined, { shallow: true });
     } else if (locale === "en") {
-      router.push("/en/rent-a-car", undefined, { shallow: true });
+      router.push("/rent-a-car", undefined, { shallow: true });
     } else if (locale === "de") {
-      router.push("/de/ein-auto-mieten", undefined, { shallow: true });
+      router.push("/ein-auto-mieten", undefined, { shallow: true });
     }
   }, [locale]);
 

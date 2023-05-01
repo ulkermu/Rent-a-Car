@@ -16,15 +16,15 @@ const Blog = ({ dir, blog }) => {
     id: "page.blog.head.meta.description",
   });
 
-  useEffect(() => {
-    if (locale === "tr") {
-      router.push("/blog", undefined, { shallow: true });
-    } else if (locale === "en") {
-      router.push("/en/blog", undefined, { shallow: true });
-    } else if (locale === "de") {
-      router.push("/de/blog", undefined, { shallow: true });
-    }
-  }, [locale]);
+  // useEffect(() => {
+  //   if (locale === "tr") {
+  //     router.push("/blog", undefined, { shallow: true });
+  //   } else if (locale === "en") {
+  //     router.push("/en/blog", undefined, { shallow: true });
+  //   } else if (locale === "de") {
+  //     router.push("/de/blog", undefined, { shallow: true });
+  //   }
+  // }, [locale]);
 
   return (
     <>

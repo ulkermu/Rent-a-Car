@@ -34,7 +34,7 @@ const NavMenu = () => {
       >
         {[
           { id: "page.home.link", source: "/" },
-          { id: "page.about.link", source: "/about" },
+          { id: "page.about.link", source: "/hakkimizda" },
           { id: "page.blog.link", source: "/blog" },
         ].map((text, key) => (
           <Link

@@ -9,26 +9,22 @@ const nextConfig = {
   },
   async rewrites() {
     return [
-      {
-        source: "/hakkimizda",
-        destination: "/about",
-      },
+      // {
+      //   source: "/hakkimizda",
+      //   destination: "/hakkimizda",
+      // },
       {
         source: "/about",
-        destination: "/about",
+        destination: "/hakkimizda",
       },
       {
         source: "/ueber-uns",
-        destination: "/about",
+        destination: "/hakkimizda",
       },
-      {
-        source: "/arac-kirala",
-        destination: "/arac-kirala",
-      },
-      {
-        source: "/rent-a-car",
-        destination: "/arac-kirala",
-      },
+      // {
+      //   source: "/arac-kirala",
+      //   destination: "/arac-kirala",
+      // },
       {
         source: "/rent-a-car",
         destination: "/arac-kirala",
