@@ -1,10 +1,10 @@
 import Head from "next/head";
 import { useIntl } from "react-intl";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import CarSelect from "./components/home/sectionCar/CarSelect";
-import SectionAbout from "./components/home/SectionAbout";
-import SectionLocation from "./components/home/SectionLocation";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import CarSelect from "../components/home/sectionCar/CarSelect";
+import SectionAbout from "../components/home/SectionAbout";
+import SectionLocation from "../components/home/SectionLocation";
 import { Divider } from "@mui/material";
 import Link from "next/link";
 
@@ -40,7 +40,7 @@ export default function Home({ dir, blog }) {
         <div className="blog-section">
           <h2>Blog</h2>
           <div className="blog-section-links">
-            {blog?.map((read, key) => (
+            {blog.map((read, key) => (
               <Link className="blog-section-link" key={key} href={read.href}>
                 <img src={read.src} alt={read.title} />
                 <strong style={{ fontSize: 14 }}>{read.title}</strong>

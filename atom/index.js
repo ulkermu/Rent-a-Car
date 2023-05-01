@@ -12,7 +12,7 @@ export const pickClockState = atom({
 
 export const dropDateState = atom({
   key: "dropDate",
-  default: new Date(new Date().getTime() + (24 * 60 * 60 * 1000)),
+  default: new Date(new Date().getTime() + 24 * 60 * 60 * 1000),
 });
 
 export const dropClockState = atom({
@@ -52,5 +52,30 @@ export const differenceInDaysState = atom({
 
 export const carsState = atom({
   key: "cars",
-  default: [],
+  default: [
+    {
+      id: 1,
+      model: "Citroen Elysee Benzinli Manuel",
+      class: "eko",
+      fuel: "gasoline",
+      gear: "manuel",
+      price: 675,
+    },
+    {
+      id: 2,
+      model: "Renault Symbol Benzinli Manuel",
+      class: "eko",
+      fuel: "diesel",
+      gear: "auto",
+      price: 800,
+    },
+    {
+      id: 3,
+      model: "Renault Clio Benzinli Manuel",
+      class: "eko",
+      fuel: "diesel",
+      gear: "manuel",
+      price: 725,
+    },
+  ],
 });

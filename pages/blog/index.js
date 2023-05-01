@@ -1,5 +1,5 @@
-import Footer from "@/pages/components/Footer";
-import Header from "@/pages/components/Header";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -10,7 +10,6 @@ const Blog = ({ dir, blog }) => {
   const intl = useIntl();
   const router = useRouter();
   const { locale } = router;
-  console.log(blog);
 
   const title = intl.formatMessage({ id: "page.blog.head.title" });
   const description = intl.formatMessage({

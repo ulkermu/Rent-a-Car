@@ -37,7 +37,6 @@ const SectionLocation = () => {
       span: 5,
       text: "İstanbul Avrupa Araç Kiralama",
     },
-    // Diğer resimlerinizi buraya ekleyin
   ];
 
   return (

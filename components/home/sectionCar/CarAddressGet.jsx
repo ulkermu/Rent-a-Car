@@ -1,13 +1,7 @@
-import {
-  InputLabel,
-  MenuItem,
-  ListSubheader,
-  FormControl,
-  Select,
-} from "@mui/material";
+import { MenuItem, ListSubheader, FormControl, Select } from "@mui/material";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { differentDropZoneState, getCarAddressState } from "../../../../atom";
-import places from "../../../../json/places.json";
+import { differentDropZoneState, getCarAddressState } from "../../../atom";
+import places from "../../../json/places.json";
 import React, { useCallback } from "react";
 import { FormattedMessage } from "react-intl";
 

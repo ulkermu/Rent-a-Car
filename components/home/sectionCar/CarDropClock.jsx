@@ -1,12 +1,12 @@
-import { InputLabel, MenuItem, FormControl, Select } from "@mui/material";
-import time from "../../../../json/time.json";
+import { MenuItem, FormControl, Select } from "@mui/material";
+import time from "../../../json/time.json";
 import { useRecoilState, useRecoilValue } from "recoil";
 import {
   dropClockState,
   dropDateState,
   pickClockState,
   pickDateState,
-} from "../../../../atom";
+} from "../../../atom";
 import React, { useCallback, useEffect } from "react";
 import { FormattedMessage } from "react-intl";
 
@@ -15,9 +15,6 @@ const CarDropClock = React.memo(() => {
   const pickDate = useRecoilValue(pickDateState);
   const dropDate = useRecoilValue(dropDateState);
   const pickClock = useRecoilValue(pickClockState);
-
-  //const datePick = new Date(pickDate.$d);
-  //const dateDrop = new Date(dropDate.$d);
 
   const handleDropClock = useCallback(
     (e) => {

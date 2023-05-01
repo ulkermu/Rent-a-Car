@@ -1,10 +1,7 @@
-import dayjs from "dayjs";
-import "dayjs/locale/tr";
 import {
-  carSelectSearchDisabledState,
   dropDateState,
   pickDateState,
-} from "../../../../atom";
+} from "../../../atom";
 import { useRecoilState, useRecoilValue } from "recoil";
 import React, { useCallback, useEffect } from "react";
 import { FormattedMessage } from "react-intl";
@@ -12,7 +9,6 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 const CarDropDate = React.memo(() => {
-  dayjs.locale("tr"); // Türkçe yerelleştirmeyi etkinleştirin
   const pickDate = useRecoilValue(pickDateState);
   const [dropDate, setDropDate] = useRecoilState(dropDateState);
 

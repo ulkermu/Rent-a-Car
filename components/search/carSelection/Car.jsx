@@ -1,4 +1,4 @@
-import { differenceInDaysState } from "@/atom";
+import { differenceInDaysState } from "../../../atom";
 import { Button, Divider } from "@mui/material";
 import { FormattedMessage } from "react-intl";
 import { useRecoilValue } from "recoil";

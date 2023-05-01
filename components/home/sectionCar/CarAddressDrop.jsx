@@ -6,9 +6,9 @@ import {
   Select,
 } from "@mui/material";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { differentDropZoneState, dropCarAddressState } from "../../../../atom";
+import { differentDropZoneState, dropCarAddressState } from "../../../atom";
 import React, { useCallback } from "react";
-import places from "../../../../json/places.json";
+import places from "../../../json/places.json";
 import { FormattedMessage } from "react-intl";
 
 const CarAddressDrop = React.memo(() => {

@@ -10,7 +10,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/router";
 import { CircleFlag } from "react-circle-flags";
-import { langState } from "@/atom";
+import { langState } from "../atom";
 import { useRecoilState } from "recoil";
 import Cookies from "js-cookie";
 import NavMenu from "./NavMenu";

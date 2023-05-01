@@ -2,7 +2,6 @@ import React, { useCallback } from "react";
 import {
   Box,
   Button,
-  FormControl,
   ThemeProvider,
   createTheme,
 } from "@mui/material";
@@ -13,7 +12,7 @@ import CarDropZone from "./CarDropZone";
 import CarBenefit from "./CarBenefit";
 import { useRouter } from "next/router";
 import { useRecoilValue } from "recoil";
-import { carSelectSearchDisabledState } from "@/atom";
+import { carSelectSearchDisabledState } from "../../../atom";
 import { FormattedMessage } from "react-intl";
 
 const theme = createTheme({
@@ -30,13 +29,6 @@ const theme = createTheme({
       styleOverrides: {
         paper: {
           maxHeight: "300px",
-        },
-      },
-    },
-    MuiFormLabel: {
-      styleOverrides: {
-        root: {
-          //fontWeight: 700,
         },
       },
     },

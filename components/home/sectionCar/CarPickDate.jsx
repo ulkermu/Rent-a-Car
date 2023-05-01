@@ -1,12 +1,7 @@
 import React from "react";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-//import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { dropDateState, pickDateState } from "../../../../atom";
-import dayjs from "dayjs";
+import { dropDateState, pickDateState } from "../../../atom";
 import { FormattedMessage } from "react-intl";
-import { StaticDatePicker } from "@mui/x-date-pickers";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 

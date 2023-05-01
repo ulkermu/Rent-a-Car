@@ -1,5 +1,5 @@
-import Footer from "@/pages/components/Footer";
-import Header from "@/pages/components/Header";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 import Head from "next/head";
 import { FormattedMessage, useIntl } from "react-intl";
 import { useRouter } from "next/router";
