@@ -60,8 +60,8 @@ export default function Home({ dir, blog }) {
 export async function getServerSideProps(context) {
   try {
     // Fetch data from external API
-    const res = await fetch(`http://localhost:3000/api/blog`);
-
+    const res = await fetch(process.env.NEXT_PUBLIC_API_URL);
+    console.log(process.env.NODE_ENV);
     if (!res.ok) {
       console.error(`Failed to fetch data, status: ${res.status}`);
       return {
