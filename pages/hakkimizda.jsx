@@ -15,15 +15,15 @@ const About = ({ dir }) => {
     id: "page.about.head.meta.description",
   });
 
-  useEffect(() => {
-    if (locale === "tr") {
-      router.push("/hakkimizda", undefined, { shallow: true });
-    } else if (locale === "en") {
-      router.push("/about", undefined, { shallow: true });
-    } else if (locale === "de") {
-      router.push("/ueber-uns", undefined, { shallow: true });
-    }
-  }, [locale]);
+  // useEffect(() => {
+  //   if (locale === "tr") {
+  //     router.push("/hakkimizda", undefined, { shallow: true });
+  //   } else if (locale === "en") {
+  //     router.push("/about", undefined, { shallow: true });
+  //   } else if (locale === "de") {
+  //     router.push("/ueber-uns", undefined, { shallow: true });
+  //   }
+  // }, [locale]);
 
   return (
     <>

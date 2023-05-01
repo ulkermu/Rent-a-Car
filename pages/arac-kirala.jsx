@@ -19,21 +19,21 @@ const Search = ({ dir }) => {
   const getCarAddress = useRecoilValue(getCarAddressState);
   const dropCarAddress = useRecoilValue(dropCarAddressState);
 
-  useEffect(() => {
-    if (!getCarAddress || (differentDropZone && !dropCarAddress)) {
-      router.push("/", undefined, { shallow: true });
-    }
-  }, [router, getCarAddress, differentDropZone, dropCarAddress]);
+  // useEffect(() => {
+  //   if (!getCarAddress || (differentDropZone && !dropCarAddress)) {
+  //     router.push("/", undefined, { shallow: true });
+  //   }
+  // }, [router, getCarAddress, differentDropZone, dropCarAddress]);
 
-  useEffect(() => {
-    if (locale === "tr") {
-      router.push("/arac-kirala", undefined, { shallow: true });
-    } else if (locale === "en") {
-      router.push("/rent-a-car", undefined, { shallow: true });
-    } else if (locale === "de") {
-      router.push("/ein-auto-mieten", undefined, { shallow: true });
-    }
-  }, [locale]);
+  // useEffect(() => {
+  //   if (locale === "tr") {
+  //     router.push("/arac-kirala", undefined, { shallow: true });
+  //   } else if (locale === "en") {
+  //     router.push("/rent-a-car", undefined, { shallow: true });
+  //   } else if (locale === "de") {
+  //     router.push("/ein-auto-mieten", undefined, { shallow: true });
+  //   }
+  // }, [locale]);
 
   return (
     <>
