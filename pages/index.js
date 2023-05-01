@@ -8,7 +8,7 @@ import SectionLocation from "../components/home/SectionLocation";
 import { Divider } from "@mui/material";
 import Link from "next/link";
 
-export default function Home({ dir }) {
+export default function Home({ dir, blog }) {
   const intl = useIntl();
 
   const title = intl.formatMessage({ id: "page.home.head.title" });
@@ -39,14 +39,14 @@ export default function Home({ dir }) {
         <Divider />
         <div className="blog-section">
           <h2>Blog</h2>
-          {/* <div className="blog-section-links">
+          <div className="blog-section-links">
             {blog.map((read, key) => (
               <Link className="blog-section-link" key={key} href={read.href}>
                 <img src={read.src} alt={read.title} />
                 <strong style={{ fontSize: 14 }}>{read.title}</strong>
               </Link>
             ))}
-          </div> */}
+          </div>
           <Link className="blog-page-link" href={"/blog"}>
             Tüm Blog Yazıları
           </Link>
@@ -57,11 +57,26 @@ export default function Home({ dir }) {
   );
 }
 
-// export async function getServerSideProps(context) {
-//   // Fetch data from external API
-//   const res = await fetch(`http://localhost:3000/api/blog`);
-//   const blog = await res.json();
+export async function getServerSideProps(context) {
+  try {
+    // Fetch data from external API
+    const res = await fetch(`http://localhost:3000/api/blog`);
 
-//   // Pass data to the page via props
-//   return { props: { blog } };
-// }
+    if (!res.ok) {
+      console.error(`Failed to fetch data, status: ${res.status}`);
+      return {
+        notFound: true,
+      };
+    }
+
+    const blog = await res.json();
+
+    // Pass data to the page via props
+    return { props: { blog } };
+  } catch (error) {
+    console.error("Error while fetching data:", error);
+    return {
+      notFound: true,
+    };
+  }
+}

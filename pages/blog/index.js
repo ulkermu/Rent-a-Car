@@ -65,10 +65,25 @@ const Blog = ({ dir, blog }) => {
 export default Blog;
 
 export async function getServerSideProps(context) {
-  // Fetch data from external API
-  const res = await fetch(`http://localhost:3000/api/blog`);
-  const blog = await res.json();
+  try {
+    // Fetch data from external API
+    const res = await fetch(`http://localhost:3000/api/blog`);
 
-  // Pass data to the page via props
-  return { props: { blog } };
+    if (!res.ok) {
+      console.error(`Failed to fetch data, status: ${res.status}`);
+      return {
+        notFound: true,
+      };
+    }
+
+    const blog = await res.json();
+
+    // Pass data to the page via props
+    return { props: { blog } };
+  } catch (error) {
+    console.error("Error while fetching data:", error);
+    return {
+      notFound: true,
+    };
+  }
 }
