@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
 
 const BlogTitle = ({ dir, blog }) => {
   return (
@@ -15,7 +13,6 @@ const BlogTitle = ({ dir, blog }) => {
         <link rel="icon" href="/static/rental-car.svg" hrefLang="en" />
         <link rel="icon" href="/static/rental-car.svg" hrefLang="de" />
       </Head>
-      <Header />
       <main dir={dir} className="page">
         <div className="blog">
           <div className="blog-wrapper">
@@ -29,7 +26,6 @@ const BlogTitle = ({ dir, blog }) => {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   );
 };

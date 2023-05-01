@@ -1,7 +1,5 @@
 import Head from "next/head";
 import { useIntl } from "react-intl";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import CarSelect from "../components/home/sectionCar/CarSelect";
 import SectionAbout from "../components/home/SectionAbout";
 import SectionLocation from "../components/home/SectionLocation";
@@ -28,7 +26,6 @@ export default function Home({ dir, blog }) {
         <link rel="icon" href="/static/rental-car.svg" hrefLang="en" />
         <link rel="icon" href="/static/rental-car.svg" hrefLang="de" />
       </Head>
-      <Header />
       <main dir={dir} className="page">
         <div className="car-section">
           <CarSelect />
@@ -52,7 +49,6 @@ export default function Home({ dir, blog }) {
           </Link>
         </div>
       </main>
-      <Footer />
     </>
   );
 }

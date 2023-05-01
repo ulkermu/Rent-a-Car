@@ -1,30 +1,15 @@
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
 import Head from "next/head";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { useEffect } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
+import { motion } from "framer-motion";
 
 const Blog = ({ dir, blog }) => {
   const intl = useIntl();
-  const router = useRouter();
-  const { locale } = router;
 
   const title = intl.formatMessage({ id: "page.blog.head.title" });
   const description = intl.formatMessage({
     id: "page.blog.head.meta.description",
   });
-
-  // useEffect(() => {
-  //   if (locale === "tr") {
-  //     router.push("/blog", undefined, { shallow: true });
-  //   } else if (locale === "en") {
-  //     router.push("/en/blog", undefined, { shallow: true });
-  //   } else if (locale === "de") {
-  //     router.push("/de/blog", undefined, { shallow: true });
-  //   }
-  // }, [locale]);
 
   return (
     <>
@@ -38,9 +23,13 @@ const Blog = ({ dir, blog }) => {
         <link rel="icon" href="/static/rental-car.svg" hrefLang="en" />
         <link rel="icon" href="/static/rental-car.svg" hrefLang="de" />
       </Head>
-      <Header />
       <main dir={dir} className="page">
-        <div className="blog-section">
+        <motion.div
+          initial={{ y: 25, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.75 }}
+          className="blog-section"
+        >
           <h1>
             <FormattedMessage
               id="page.blog.title"
@@ -55,9 +44,8 @@ const Blog = ({ dir, blog }) => {
               </Link>
             ))}
           </div>
-        </div>
+        </motion.div>
       </main>
-      <Footer />
     </>
   );
 };

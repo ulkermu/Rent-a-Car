@@ -47,7 +47,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  margin-top: var(--headerHeight);
+  padding-top: var(--headerHeight);
 }
 
 .car-section {
