@@ -40,7 +40,7 @@ export async function getServerSideProps(context) {
   try {
     // Fetch data from external API
     const res = await fetch(
-      `http://localhost:3000/api/blog?id=${context.params.id}`
+      `${process.env.NEXT_PUBLIC_API_URL}?id=${context.params.id}`
     );
 
     if (!res.ok) {
