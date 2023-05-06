@@ -1,10 +1,108 @@
 .rent-a-car {
   padding: 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+}
+.rent-a-car .home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.rent-a-car .home .car-wrapper {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.23);
+  border-radius: 8px;
+}
+.rent-a-car .home .car-wrapper .car {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.rent-a-car .home .car-wrapper .car .car-select {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+.rent-a-car .home .car-wrapper .car .car-select .car-pick {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+.rent-a-car .home .car-wrapper .car .car-select .car-pick .car-select-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.rent-a-car .home .car-wrapper .car .car-select .car-search {
+  background-color: var(--brand);
+  min-width: 56px;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  transition: all 150ms linear;
+  text-transform: none;
+}
+.rent-a-car .home .car-wrapper .car .car-select .car-search:hover {
+  transition: all 150ms linear;
+  background-color: #5d8988;
+}
+.rent-a-car .home .car-wrapper .car-benefit {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 10px 20px;
+}
+.rent-a-car .home .car-wrapper .car-benefit .car-benefit-item {
+  display: flex;
+  align-items: flex-end;
+}
+.rent-a-car .rent-a-car-option {
+  display: flex;
+  gap: 20px;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-options {
+  max-width: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-options.fixed {
+  position: fixed;
+  top: 100px;
+  width: 200px;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-options .MuiPaper-root {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.23);
+  border-radius: 8px;
+  border: 0;
+  margin: 0 !important;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-options .MuiPaper-root::before {
+  height: 0;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 1050px;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list.fixed-list {
+  margin-left: 220px;
 }
 .rent-a-car .rent-a-car-option .rent-a-car-list .rent-a-car-list-item {
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.23);
   padding: 20px;
   display: flex;
   gap: 20px;
@@ -32,4 +130,147 @@
   gap: 5px;
   justify-content: center;
   text-align: center;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .rent-a-car-list-item .list-item.price {
+  max-width: 200px;
+  width: 100%;
+  background-color: rgba(116, 173, 171, 0.1882352941);
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .rent-a-car-list-item .list-item.price .price-day {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .rent-a-car-list-item .list-item.price .price-total {
+  color: var(--brand);
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .rent-a-car-list-item .list-item.price .price-amount {
+  text-align: center;
+  font-weight: 700;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .rent-a-car-list-item .list-item.price .price-button {
+  background-color: var(--brand);
+  min-width: 56px;
+  width: 100%;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  transition: all 150ms linear;
+  text-transform: none;
+  font-weight: 700;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .rent-a-car-list-item .list-item.price .price-button.expanded-button {
+  background-color: rgb(133, 133, 74);
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .rent-a-car-list-item .list-item.price .price-button.expanded-button:hover {
+  transition: all 150ms linear;
+  background-color: rgb(111, 111, 76);
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .rent-a-car-list-item .list-item.price .price-button:hover {
+  transition: all 150ms linear;
+  background-color: #5d8988;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-nav {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-nav button {
+  text-transform: none;
+  border-radius: 0;
+  color: black;
+  font-weight: 700;
+  font-size: 13px;
+  border-bottom: 2px solid transparent;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-nav button.active {
+  border-bottom: 2px solid var(--brand);
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper {
+  border: 1px solid gray;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper.counter-wrapper {
+  display: grid;
+  gap: 5px;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper.counter-wrapper .counter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 10px 10px 0;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper.counter-wrapper .counter-container .counter-img {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper.counter-wrapper .counter-container .counter {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper.counter-wrapper .counter-container .counter .counter-amount {
+  color: var(--brand);
+  font-weight: 700;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper.counter-wrapper .counter-container .counter .counter-buttons {
+  border: 1px solid;
+  width: 20px;
+  display: flex;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper.counter-wrapper .counter-container .counter .counter-buttons.disabled {
+  opacity: 0.3;
+  cursor: auto;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper.counter-wrapper .counter-price {
+  display: flex;
+  gap: 5px;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper.counter-wrapper .counter-price:first-child {
+  color: var(--brand);
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper.counter-wrapper .counter-price p {
+  font-size: 13px;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper .detail-package {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  margin: 10px;
+  width: 100%;
 }/*# sourceMappingURL=Rent.css.map */

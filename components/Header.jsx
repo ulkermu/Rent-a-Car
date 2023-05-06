@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect } from "react";
 import {
   MenuItem,
   Select,
@@ -95,7 +95,7 @@ const Header = React.memo(() => {
           </Link>
           <div className="header-lang">
             <Select
-              sx={{ width: "150px" }}
+              className="lang-select"
               size="small"
               value={lang}
               onChange={handleLangChange}
@@ -118,7 +118,7 @@ const Header = React.memo(() => {
                         countryCode={locale === "en" ? "gb" : locale}
                         height="20"
                       />
-                      <Typography fontSize={13}>
+                      <Typography className="lang-text" fontSize={13}>
                         {locale === "en"
                           ? "English"
                           : locale === "de"

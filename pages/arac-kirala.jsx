@@ -1,6 +1,6 @@
 import Head from "next/head";
 import SearchOption from "../components/search/SearchOption";
-
+import CarSelect from "@/components/home/sectionCar/CarSelect";
 
 const Search = ({ dir }) => {
   return (
@@ -20,7 +20,7 @@ const Search = ({ dir }) => {
       </Head>
       <main dir={dir} className="page">
         <div className="rent-a-car">
-          <h1>Araç Kiralama Sayfası</h1>
+          <CarSelect />
           <SearchOption />
         </div>
       </main>

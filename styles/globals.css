@@ -91,9 +91,16 @@
 
 .modal-button {
   text-transform: none;
-  padding: 0;
-  margin: 0 0 2px -2px;
-  font-size: 16px;
+  font-size: 14px;
+  background-color: var(--brand);
+  color: white;
+  padding: 3px 8px;
+  margin-left: 3px;
+}
+
+.modal-button:hover {
+  background-color: #5d8988;
+  transition: all 150ms linear;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -122,6 +129,24 @@
     --callout-border-rgb: 108, 108, 108;
     --card-rgb: 100, 100, 100;
     --card-border-rgb: 200, 200, 200;
+  }
+}
+
+.lang-select {
+  width: 150px;
+}
+
+.lang-text {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .lang-text {
+    display: none;
+  }
+
+  .lang-select {
+    width: 80px;
   }
 }
 

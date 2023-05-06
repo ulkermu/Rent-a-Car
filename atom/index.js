@@ -77,5 +77,73 @@ export const carsState = atom({
       gear: "manuel",
       price: 725,
     },
+    {
+      id: 4,
+      model: "Citroen Elysee Benzinli Manuel",
+      class: "eko",
+      fuel: "gasoline",
+      gear: "manuel",
+      price: 675,
+    },
+    {
+      id: 5,
+      model: "Renault Symbol Benzinli Manuel",
+      class: "eko",
+      fuel: "diesel",
+      gear: "auto",
+      price: 800,
+    },
+    {
+      id: 6,
+      model: "Renault Clio Benzinli Manuel",
+      class: "eko",
+      fuel: "diesel",
+      gear: "manuel",
+      price: 725,
+    },
+    {
+      id: 7,
+      model: "Citroen Elysee Benzinli Manuel",
+      class: "eko",
+      fuel: "gasoline",
+      gear: "manuel",
+      price: 675,
+    },
+    {
+      id: 8,
+      model: "Renault Symbol Benzinli Manuel",
+      class: "eko",
+      fuel: "diesel",
+      gear: "auto",
+      price: 800,
+    },
+    {
+      id: 9,
+      model: "Renault Clio Benzinli Manuel",
+      class: "eko",
+      fuel: "diesel",
+      gear: "manuel",
+      price: 725,
+    },
   ],
+});
+
+export const babySeatState = atom({
+  key: "babySeat",
+  default: 0,
+});
+
+export const superMiniDamageInsuranceState = atom({
+  key: "superMiniDamageInsurance",
+  default: false,
+});
+
+export const additionalDriverState = atom({
+  key: "additionalDriver",
+  default: false,
+});
+
+export const youngDriverState = atom({
+  key: "youngDriver",
+  default: false,
 });
