@@ -128,7 +128,7 @@
 .rent-a-car .rent-a-car-option .rent-a-car-list .rent-a-car-list-item .list-item.options .list-item-car-option .list-item-car-option-item {
   display: grid;
   gap: 5px;
-  justify-content: center;
+  justify-items: center;
   text-align: center;
 }
 .rent-a-car .rent-a-car-option .rent-a-car-list .rent-a-car-list-item .list-item.price {
@@ -224,12 +224,32 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 10px 10px 10px 0;
+  padding: 10px 20px 10px 10px;
 }
 .rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper.counter-wrapper .counter-container .counter-img {
   display: flex;
   gap: 10px;
   align-items: center;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper.counter-wrapper .counter-container .counter-img .counter-price-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper.counter-wrapper .counter-container .counter-img .counter-price-wrapper .counter-price-headline {
+  font-size: 16px;
+  font-weight: 700;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper.counter-wrapper .counter-container .counter-img .counter-price-wrapper .counter-price {
+  display: flex;
+  gap: 5px;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper.counter-wrapper .counter-container .counter-img .counter-price-wrapper .counter-price:first-child {
+  color: var(--brand);
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper.counter-wrapper .counter-container .counter-img .counter-price-wrapper .counter-price p {
+  font-size: 13px;
 }
 .rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper.counter-wrapper .counter-container .counter {
   display: flex;
@@ -257,20 +277,82 @@
   opacity: 0.3;
   cursor: auto;
 }
-.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper.counter-wrapper .counter-price {
-  display: flex;
-  gap: 5px;
-}
-.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper.counter-wrapper .counter-price:first-child {
-  color: var(--brand);
-}
-.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper.counter-wrapper .counter-price p {
-  font-size: 13px;
-}
 .rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper .detail-package {
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
   margin: 10px;
   width: 100%;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper .detail-package .package-price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper .detail-package .package-price .package-price-text {
+  display: flex;
+  flex-direction: column;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper .detail-package .package-price .package-price-text p {
+  font-size: 16px;
+  font-weight: 700;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper .detail-package .package-price .package-price-text .package-price-amount {
+  display: flex;
+  gap: 5px;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper .detail-package .package-price .package-price-text .package-price-amount .amount {
+  color: rgb(133, 133, 74);
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-detail-pacgakes .detail-package-wrapper .detail-package .package-price .package-price-text .package-price-amount p {
+  font-size: 13px;
+  font-weight: 400;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-rent-condition h4 {
+  padding-bottom: 5px;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-rent-condition p {
+  font-size: 14px;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-page .car-settings {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-price {
+  display: flex;
+  padding: 20px;
+  background-color: rgba(116, 173, 171, 0.1882352941);
+  border-radius: 8px;
+  gap: 20px;
+  justify-content: flex-end;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-price .car-detail-price-amount-wrapper .car-detail-price-amount {
+  font-size: 40px;
+  color: var(--darkBrand);
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-price .car-detail-price-amount-wrapper .car-detail-price-amount .car-detail-price-amount-currency {
+  font-size: 20px;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-price .car-detail-price-amount-wrapper .car-detail-price-text {
+  font-size: 16px;
+  color: var(--darkBrand);
+  text-align: center;
+}
+.rent-a-car .rent-a-car-option .rent-a-car-list .car-detail .car-detail-price .rent-button {
+  background-color: var(--brand);
+  min-width: 110px;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  transition: all 150ms linear;
+  text-transform: none;
 }/*# sourceMappingURL=Rent.css.map */

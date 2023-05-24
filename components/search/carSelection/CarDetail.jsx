@@ -1,13 +1,18 @@
 import { Button } from "@mui/material";
 import { useState } from "react";
 import CarPackages from "./carDetail/CarPackages";
+import { useRecoilValue } from "recoil";
+import { totalState } from "@/atom";
+import CarRentCondition from "./carDetail/CarRentCondition.jsx";
 
-const CarDetail = () => {
+const CarDetail = ({ totalPrice }) => {
   const [additionPackages, setAdditionPackages] = useState(true);
   const [rentCondition, setRentCondition] = useState(false);
   const [carSettings, setCarSettings] = useState(false);
   const [carImages, setCarImages] = useState(false);
   const [inPrice, setInPrice] = useState(false);
+
+  const total = useRecoilValue(totalState);
 
   const handleAdditionPackages = () => {
     setAdditionPackages(true);
@@ -74,7 +79,17 @@ const CarDetail = () => {
         </Button>
       </div>
       <div className="car-detail-page">
-        <CarPackages />
+        {additionPackages && <CarPackages totalPrice={totalPrice} />}
+        {rentCondition && <CarRentCondition />}
+      </div>
+      <div className="car-detail-price">
+        <div className="car-detail-price-amount-wrapper">
+          <div className="car-detail-price-amount">
+            {total} <div className="car-detail-price-amount-currency">TL</div>
+          </div>
+          <div className="car-detail-price-text">Toplam Ücret</div>
+        </div>
+        <Button className="rent-button">Aracı Kirala</Button>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import { differenceInDaysState } from "../../../atom";
+import { differenceInDaysState, totalPriceState } from "../../../atom";
 import {
   Accordion,
   AccordionDetails,
@@ -13,7 +13,7 @@ import CarDetail from "./CarDetail";
 
 const Car = ({ car }) => {
   const differenceInDays = useRecoilValue(differenceInDaysState);
-  const totalPrice = (car.price * Math.ceil(differenceInDays)).toFixed(0);
+  const totalPrice = (car.price * Math.ceil(differenceInDays)).toFixed(0)
   const [expanded, setExpanded] = useState(false);
 
   const handleClickAway = () => {
@@ -47,8 +47,8 @@ const Car = ({ car }) => {
             <div className="list-item-car-option">
               <div className="list-item-car-option-item">
                 <img
-                  width={40}
-                  height={40}
+                  width={30}
+                  height={30}
                   src="/cars/fuel.png"
                   alt="Yakıt Tipi"
                 />
@@ -64,8 +64,8 @@ const Car = ({ car }) => {
               <Divider className="divider" />
               <div className="list-item-car-option-item">
                 <img
-                  width={40}
-                  height={40}
+                  width={30}
+                  height={30}
                   src="/cars/gear.png"
                   alt="Vites Tipi"
                 />
@@ -81,8 +81,8 @@ const Car = ({ car }) => {
               <Divider className="divider" />
               <div className="list-item-car-option-item">
                 <img
-                  width={40}
-                  height={40}
+                  width={30}
+                  height={30}
                   src="/cars/family.png"
                   alt="Kişi Sayısı"
                 />
@@ -108,7 +108,7 @@ const Car = ({ car }) => {
           </div>
         </div>
         <AccordionDetails>
-          <CarDetail />
+          <CarDetail totalPrice={totalPrice} />
         </AccordionDetails>
       </Accordion>
     </ClickAwayListener>

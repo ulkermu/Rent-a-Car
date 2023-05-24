@@ -147,3 +147,38 @@ export const youngDriverState = atom({
   key: "youngDriver",
   default: false,
 });
+
+export const totalState = atom({
+  key: "total",
+  default: 0,
+});
+
+export const hgsAmountState = atom({
+  key: "hgsAmount",
+  default: 656,
+});
+
+export const babySeatAmountState = atom({
+  key: "babySeatAmount",
+  default: 44,
+});
+
+export const miniAmountState = atom({
+  key: "miniAmount",
+  default: 66,
+});
+
+export const superMiniAmountState = atom({
+  key: "superMiniAmount",
+  default: 110,
+});
+
+export const addDriverAmountState = atom({
+  key: "addDriverAmount",
+  default: 44,
+});
+
+export const youngDriverAmountState = atom({
+  key: "youngDriverAmount",
+  default: 110,
+});
