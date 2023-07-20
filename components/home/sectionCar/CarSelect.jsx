@@ -41,7 +41,9 @@ const CarSelect = React.memo(() => {
 
   const handleSearch = useCallback((e) => {
     e.preventDefault();
-    router.push("/arac-kirala", undefined, { shallow: true });
+    // router.push("/arac-kirala", undefined, { shallow: true });
+
+    
   }, []);
 
   return (
